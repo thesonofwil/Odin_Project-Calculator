@@ -1,0 +1,107 @@
+/* Background */
+body {
+  width: 500px;
+  margin: 4% auto;
+  font-family: "Source Sans Pro", sans-serif;
+  letter-spacing: 5px;
+  font-size: 1.8rem;
+  background-color: #6992cb;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+
+  /* Centers calclulator on page */
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.calculator {
+  padding: 1em;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  border-color: black;
+  background-color: #575451;
+
+  /* Flex to grow vertically when display expands */
+  display: flex;
+  flex-direction: column;
+  min-height: 23em;
+  align-items: center;
+}
+
+.buttons {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(100px, auto) repeat(4, 100px);
+  margin-left: 5%; /* center buttons after scaling size */
+  margin-top: 2.5em;
+}
+
+button {
+  width: 80%;
+  height: 80%;
+  border-width: 1px;
+  border-radius: 50px;
+  margin-top: 1em;
+  font-size: 18px;
+  background-color: #efeeee;
+}
+
+button:hover {
+  background-color: #beb9b9;
+}
+
+.operator {
+  background-color: #eda33c;
+}
+
+.operator:hover {
+  background-color: #c1924f;
+}
+
+.delete {
+  font-weight: bold;
+  background-color: #f36b84;
+}
+
+.delete:hover {
+  background-color: #d1697c;
+}
+
+#equals {
+  background-color: #76d06b;
+}
+
+#equals:hover {
+  background-color: #639e5b;
+}
+
+#decimal {
+  background-color: #efeeee;
+}
+
+#decimal:hover {
+  background-color: #beb9b9;
+}
+
+.display {
+  border: 1px solid #ddd;
+  border-radius: 1px;
+  word-break: break-all; /* causes overflow to expand vertically */
+  overflow: hidden;
+  width: 400px;
+  min-height: 60px;
+  padding-right: 15px;
+  padding-top: 10px;
+  text-align: right;
+  margin-left: 3px;
+  margin-right: 3px;
+  font-size: 2.5rem;
+  transition: all 0.2s ease-in-out;
+  color: rgb(215, 215, 224); /* color of chars in display */
+  background-color: rgb(50, 47, 47);
+}
